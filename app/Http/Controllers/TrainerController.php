@@ -13,7 +13,7 @@ class TrainerController extends Controller
      */
     public function index()
     {
-        return "hola desde el controlador resource trainer";
+        return "hola desde el controlador resource trainer prueba";
     }
 
     /**
