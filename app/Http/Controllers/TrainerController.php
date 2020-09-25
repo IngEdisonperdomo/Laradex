@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Trainer;
 
 class TrainerController extends Controller
 {
@@ -23,7 +24,7 @@ class TrainerController extends Controller
      */
     public function create()
     {
-        //
+        return view('trainers.create');
     }
 
     /**
@@ -34,7 +35,10 @@ class TrainerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $trainer = new Trainer();
+        $trainer->name = $request->input('name');
+        $trainer->save();
+        return 'Save';
     }
 
     /**
