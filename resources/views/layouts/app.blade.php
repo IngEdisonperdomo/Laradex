@@ -7,6 +7,9 @@
   <title>Laradex -@yield('title')</title>
 </head>
 <body>
+  <nav class="navbar navbar-dark bg-primary">
+    <a href="#" class="navbar-brand">Laradex</a>
+  </nav>
 
   @yield('content')
 
