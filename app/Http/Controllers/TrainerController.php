@@ -46,8 +46,11 @@ class TrainerController extends Controller
         $trainer->name = $request->input('name');
         $trainer->description = $request->input('descripcion');
         $trainer->avatar = $name;
+        $trainer->slug = $request->input('name');
         $trainer->save();
-        return 'Save';
+        
+        $trainers = Trainer::all();
+        return view('trainers.index', compact('trainers'));
     }
 
     /**
@@ -93,7 +96,7 @@ class TrainerController extends Controller
         }
 
         $trainer->save();
-        
+
         $trainers = Trainer::all();
         return view('trainers.index', compact('trainers'));
     }

@@ -9,7 +9,7 @@
       
       @foreach($trainers as $trainer)
       <div class="col-md-4">  
-        <div class="card text-center">
+        <div class="card text-center p-3">
           <img src="/images/{{ $trainer->avatar }}" alt="" class="card-img-top rounded-circle mx-auto d-block mb-2" style="width:100px; height: 100px; background-color:#efefef;">
           <div class="card-body">
             <div class="card-title">{{$trainer->name}}</div>

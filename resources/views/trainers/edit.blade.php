@@ -15,6 +15,11 @@
           <input type="text" class="form-control" id="name" name="name" value="{{$trainer->name}}">
           
         </div>
+        <div class="form-group">
+          <label for="slug">nombre</label>
+          <input type="text" class="form-control" id="slug" name="slug" value="{{$trainer->slug}}" readonly>
+          
+        </div>
 
         <div class="form-group">
           <label for="descripcion">Descripcion</label>

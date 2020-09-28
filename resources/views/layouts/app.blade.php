@@ -9,6 +9,7 @@
 <body>
   <nav class="navbar navbar-dark bg-primary mb-2">
     <a href="{{  url('/') }}" class="navbar-brand">Laradex</a>
+    <a href="{{  url('/crear') }}" class="navbar-brand btn btn-info">Crear</a>
   </nav>
 
   @yield('content')

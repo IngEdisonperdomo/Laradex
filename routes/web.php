@@ -26,3 +26,4 @@ Route::get('/mi_primer_ruta', function(){
 });
 
 Route::resource('trainer','TrainerController');
+Route::get('/crear','TrainerController@create');
