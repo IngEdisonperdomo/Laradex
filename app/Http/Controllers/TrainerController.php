@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Trainer;
-use app\Http\Requests\StoreTrainerRequest;
+use App\Http\Requests\StoreTrainerRequest;
 class TrainerController extends Controller
 {
     /**
@@ -51,8 +51,8 @@ class TrainerController extends Controller
         $trainer->slug = $request->input('slug');
         $trainer->save();
         
-        $trainers = Trainer::all();
-        return view('trainers.index', compact('trainers'));
+        return redirect()->route('trainer.index');
+        
     }
 
     /**
@@ -99,8 +99,8 @@ class TrainerController extends Controller
 
         $trainer->save();
 
-        $trainers = Trainer::all();
-        return view('trainers.index', compact('trainers'));
+        
+        return redirect()->route('trainer.show', [$trainer])->with('status','Entrenador Actualizado');
     }
 
     /**
@@ -115,7 +115,6 @@ class TrainerController extends Controller
         \File::delete($file_path);
         $trainer->delete();
         
-        $trainers = Trainer::all();
-        return view('trainers.index', compact('trainers'));
+        return redirect()->route('trainer.index');
     }
 }

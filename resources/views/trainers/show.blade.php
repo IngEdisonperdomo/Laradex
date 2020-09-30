@@ -6,7 +6,7 @@
 
   <div class="container">
     <div class="row">
-      
+    @include(commons.success)
       
       <div class="col-md-12 text-center">  
         
